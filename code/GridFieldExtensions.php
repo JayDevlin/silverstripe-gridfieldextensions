@@ -11,7 +11,7 @@ class GridFieldExtensions {
 	}
 
 	public static function get_module_dir() {
-		return basename(dirname(__DIR__));
+		return substr(Director::makeRelative(dirname(dirname(__FILE__))), 1);
 	}
 
 }
